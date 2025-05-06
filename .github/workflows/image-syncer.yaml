@@ -39,6 +39,7 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
          skopeo copy docker://docker.io/rancher/rancher:latest docker://${{ secrets.ALI_PERSONAL_DOCKER_REGISTRY_URL}}/endmehub/ranch:v1
+         skopeo copy docker://docker.io/rancher/rancher:latest docker://${{ secrets.ALI_PERSONAL_DOCKER_REGISTRY_URL}}/endmehub/nginx:1.18
 
       #注释 
          #skopeo copy docker://docker.io/kong/httpbin:0.2.3 docker://${{ secrets.ALI_PERSONAL_DOCKER_REGISTRY_URL}}/endmehub/httpbin:0.2.3
